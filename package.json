@@ -1,0 +1,53 @@
+{
+  "name": "nodetemplate",
+  "version": "1.0.0",
+  "description": "template node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint.fix": "eslint . --ext .ts --fix",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "es2023": true,
+      "jest": true
+    },
+    "rules": {
+      "prettier/prettier": "warn"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "author": "Xuanidev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.5.3"
+  }
+}
